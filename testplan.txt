@@ -1,0 +1,18 @@
+Workload E:
+	mallocs 1 byte, then 2 bytes , then 3 bytes.... Until  50 bytes.
+	after 25 Malloc calls free all 25.
+	Then continue and at 50 malloc calls free the remaining 25
+
+We included this workload: 
+To ensure that malloc and free work fine when dealing with a medium value of bytes consecutively and then freed in a specific order.
+
+
+Workload F: 
+
+	 malloc 1500 bytes twice then free them. Do this 2x;
+	 then malloc a single byte twice and then free that.
+	 then repeat the first process one last time.
+
+
+We included this to workload:
+Make sure that malloc and free can handle cases where user asks to malloc and free large amounts of bytes.
